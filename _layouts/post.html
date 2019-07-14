@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: base
 ---
-{% include post.html %}
 
-{% if site.disqus and page.comments %}
-    {% include disqus.html %}
-{% endif %}
+{% include post.html post=page link_title=false %}
+
+{% include about.html %}
+
+{% include related.html post=page %}
