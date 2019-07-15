@@ -1,0 +1,87 @@
+---
+layout: post
+title:  "TIL"
+subtitle:   "Today I Learned"
+categories: devlog
+tags: TIL
+---
+
+
+## TIL
+add,commit,push에 대해서는 대략적으로 알고 있었고, 또 쓰고 있었지만 
+대부분 IDE의 기능을 이용하거나 github 데스크탑을 이용하여 클릭으로 사용해왔었음
+
+
+
+
+### Git
+ 
+```git
+git add "ex.js"  //파일추가
+
+git commit -m "행동" //커밋 & 내용작성
+
+git push origin //나의 원격 저장소에 push
+
+```
+-----
+
+### Fork를 통해 오픈소스에도 기여!?
+
+>여기서는 만들어진 branch를 사용하였지만,
+원하는 프로젝트를 fork 후 master 기반으로 branch생성하고 수정하여 commit & push 그리고 PR 날려
+그리고 merge되면 기여?
+
+
+
+
+ - 내가 원하는 Repository를 Fork => github에서 클릭
+	-> 나의 원격 저장소에 저장
+	
+ - 다시 git clone 명령으로 사용해 로컬 저장소를 생성
+ ```git
+ git clone -b {**brach_name**} --single-branch //수많은 branch 중에 원하는 branch를 클론
+ ```
+ 
+ - 나의 branch로 코딩하면서 add,commit,push 
+ - 그리고 PR
+
+무튼 이러한 비슷한 방식으로 다양한 협업 방식이 존재! 
+오늘같은 방식으로 한게 Forking Workflow 라는 방식 같은데, 좀 더 공부!
+
+
+
+
+### git reset, revert
+
+- 커밋을 지우고 싶어 되돌리려다 뭔가 꼬여버린 상황이 발생
+- 뭐가 계속 안되고 다시 가져오고;; 
+- 아마 로컬에는 reset을 사용하여 원하는 위치로 돌아갔는데 깃헙에는 그대로 남아있기때문에 그런것 같음
+	
+- 일단은 그냥 원격,로컬저장소를 둘다 지우고 다시 fork하여 다시 진행;;
+- 그래서 연습용 저장소 만들어서 reset, revert 연습중...
+- reset은 안쓰는게 좋다던데..
+```git
+$ git reset --hard  '커밋번호' 
+``` 
+- commit 번호는 hash를 사용하여 여 중복될 가능성이 없다한다(그냥;ㅎ)
+
+
+
+
+---
+~~작성중
+
+
+
+
+ 
+
+	
+
+
+ 	
+
+
+
+
